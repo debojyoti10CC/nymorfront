@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon-light.png" media="(prefers-color-scheme: light)" />
+    <link rel="icon" type="image/png" href="/favicon-dark.png" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" type="image/png" href="/favicon-light.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nymor — a spend cap AI agents can't talk their way past</title>
+    <meta name="description" content="Nymor lets AI agents discover and pay for API resources over x402 on Stellar, with a spend cap enforced on-chain by a Soroban smart contract — proven with real accepted and rejected testnet transactions, not just tests." />
+  </head>
+  <body>
+    <div id="app">
+      <header class="nav">
+        <div class="wrap">
+          <a class="logo" href="#top">
+            <img class="logo-mark" src="/logo/light.png" alt="" width="22" height="22" />
+            Nymor
+          </a>
+          <nav class="nav-links">
+            <a class="nav-link hide-mobile" href="#proof">What's proven</a>
+            <a class="nav-link hide-mobile" href="#how">How it works</a>
+            <a class="nav-icon-link" href="https://github.com/debojyoti10CC/nymor" target="_blank" rel="noopener" aria-label="View source on GitHub">
+              <svg class="nav-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#github-icon"></use></svg>
+            </a>
+            <a class="btn btn-primary" href="https://docs.nymor.xyz/">Read the docs</a>
+          </nav>
+        </div>
+      </header>
+
+      <main id="top">
+        <section class="hero">
+          <div class="wrap hero-grid">
+            <div class="hero-left">
+              <span class="eyebrow">MCP · x402 · Stellar</span>
+              <h1 class="hero-display">A spend cap AI agents can't <em>talk their way past</em>.</h1>
+              <p class="body-default">
+                Nymor lets any MCP-connected AI agent discover paid API resources and pay for them
+                in real USDC on Stellar — inside a budget enforced by a Soroban smart contract the
+                network itself refuses to let overspend, not just application code the agent's own
+                logic could route around.
+              </p>
+              <div class="hero-ctas">
+                <a class="btn btn-primary" href="https://docs.nymor.xyz/">Read the docs</a>
+                <a class="btn btn-ghost" href="https://github.com/debojyoti10CC/nymor" target="_blank" rel="noopener">View on GitHub ↗</a>
+              </div>
+            </div>
+            <div class="hero-right">
+              <div class="hero-card">
+                <div class="hero-card-mark">
+                  <img src="/logo/light.png" alt="" width="64" height="64" />
+                </div>
+                <div class="hero-stat">
+                  <span class="mono-label">Headline on-chain result</span>
+                  <div class="hero-stat-number">2<span class="hero-stat-slash">/</span>2</div>
+                  <span class="small-ui">real testnet transactions — one accepted under cap, one rejected on-chain over cap</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="intro-bar">
+          <div class="wrap">
+            <span class="body-medium">The rejection is a real Stellar transaction, not a test assertion.</span>
+            <a class="intro-link" href="https://docs.nymor.xyz/on-chain-policy">Read the proof →</a>
+          </div>
+        </div>
+
+        <section class="stats">
+          <div class="stat">
+            <div class="stat-number">5</div>
+            <span class="mono-label">Real paid resources</span>
+          </div>
+          <div class="stat">
+            <div class="stat-number">2</div>
+            <span class="mono-label">On-chain proof transactions</span>
+          </div>
+          <div class="stat">
+            <div class="stat-number">19</div>
+            <span class="mono-label">Passing tests, unit + integration</span>
+          </div>
+          <div class="stat">
+            <div class="stat-number">1</div>
+            <span class="mono-label">Gap, disclosed on purpose</span>
+          </div>
+        </section>
+
+        <section class="features">
+          <div class="feature">
+            <div class="feature-ring"></div>
+            <h3 class="card-heading">Real facilitator, not mocks</h3>
+            <p class="body-tight"><strong>Every payment settles real USDC on Stellar testnet.</strong><br>Real x402 challenge-response over the OZ Channels facilitator — never a simulated stand-in.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-ring"></div>
+            <h3 class="card-heading">Enforced on-chain, not just in code</h3>
+            <p class="body-tight"><strong>A Soroban smart account refuses the overspend itself.</strong><br>Proven with a real transaction rejected on-chain — <code>Error(Contract, #3221)</code> — not just a passing test.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-ring"></div>
+            <h3 class="card-heading">Honest by construction</h3>
+            <p class="body-tight"><strong>Every claim ships with a transaction hash or a test file.</strong><br>The one gap that isn't wired up yet is documented, not buried — see the status page.</p>
+          </div>
+        </section>
+
+        <section class="section" id="proof">
+          <div class="wrap">
+            <div class="section-head">
+              <span class="eyebrow">What Nymor proves</span>
+              <h2 class="section-heading">Six claims, <em>zero</em> rounding up.</h2>
+              <p class="body-default">Every result ships a real transaction hash or a test file — the same discipline as a conformance suite, applied to a payments product.</p>
+            </div>
+
+            <div class="invariants-table">
+              <div class="inv-row head">
+                <span class="mono-label">ID</span>
+                <span class="mono-label">Claim</span>
+                <span class="mono-label inv-category">Evidence</span>
+                <span class="mono-label">Status</span>
+              </div>
+              <div class="inv-row">
+                <span class="inv-id">P1</span>
+                <div><div class="inv-name">x402 settles real USDC on Stellar testnet</div><div class="inv-source">RUN_INTEGRATION=1 pnpm test</div></div>
+                <a class="inv-link inv-category" href="https://stellar.expert/explorer/testnet/tx/26a0e061083acd919aeea55d66e95ac8d93d9952c5bb7a1ba1dc9998d419c0d7" target="_blank" rel="noopener">26a0e061… ↗</a>
+                <span class="tier must">proven</span>
+              </div>
+              <div class="inv-row">
+                <span class="inv-id">P2</span>
+                <div><div class="inv-name">MCP wiring works over the real stdio protocol</div><div class="inv-source">mcp.integration.test.ts, not a direct import</div></div>
+                <a class="inv-link inv-category" href="https://stellar.expert/explorer/testnet/tx/6347154e932dfeca2116f3b0a46298f94468f506fa613e3b5fa15e08554cf01a" target="_blank" rel="noopener">6347154e… ↗</a>
+                <span class="tier must">proven</span>
+              </div>
+              <div class="inv-row">
+                <span class="inv-id">P3</span>
+                <div><div class="inv-name">Concurrent spend requests can't double-spend past the cap</div><div class="inv-source">20-way concurrency test, ledger.test.ts</div></div>
+                <span class="inv-category">test suite</span>
+                <span class="tier must">proven</span>
+              </div>
+              <div class="inv-row">
+                <span class="inv-id">P4</span>
+                <div><div class="inv-name">On-chain smart account authorizes a transfer under its cap</div><div class="inv-source">successful: true on Horizon</div></div>
+                <a class="inv-link inv-category" href="https://stellar.expert/explorer/testnet/tx/e4358552e77b46c87a5ff408bd42cd63efbf26a276e41806148b364a6bd1c4b2" target="_blank" rel="noopener">e4358552… ↗</a>
+                <span class="tier must">proven</span>
+              </div>
+              <div class="inv-row">
+                <span class="inv-id">P5</span>
+                <div><div class="inv-name">On-chain smart account rejects a transfer over its cap — on-chain</div><div class="inv-source">Error(Contract, #3221) SpendingLimitExceeded</div></div>
+                <a class="inv-link inv-category" href="https://stellar.expert/explorer/testnet/tx/d0f3e128df2bd2d2582a532c32e119dedd1957afdaa79f50412eebca76965f74" target="_blank" rel="noopener">d0f3e128… ↗</a>
+                <span class="tier must">headline</span>
+              </div>
+              <div class="inv-row">
+                <span class="inv-id">P6</span>
+                <div><div class="inv-name">Real agent payments route through that on-chain cap</div><div class="inv-source">buyer signer still a raw Ed25519 key — disclosed</div></div>
+                <span class="inv-category">docs.nymor.xyz</span>
+                <span class="tier gap">not wired up</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="ticks"></div>
+
+        <section class="section" id="how">
+          <div class="wrap">
+            <div class="section-head">
+              <span class="eyebrow">How it works</span>
+              <h2 class="section-heading">Discover, <em>spend-gate</em>, pay.</h2>
+            </div>
+
+            <div class="how-grid">
+              <div class="how-card">
+                <h3 class="card-heading">1. Discover</h3>
+                <p class="body-tight">An agent calls <code>nymor.discover()</code> over MCP and gets back a real registry — live price data, an LLM summarizer, a Stellar balance lookup, image generation, weather.</p>
+              </div>
+              <div class="how-card">
+                <h3 class="card-heading">2. Spend-gate</h3>
+                <p class="body-tight">Before any money moves, the request is checked against a budget — an atomic application ledger, and a Soroban smart account the network itself can refuse to authorize.</p>
+              </div>
+              <div class="how-card">
+                <h3 class="card-heading">3. Pay</h3>
+                <p class="body-tight">A real x402 challenge-response: 402, a signed Stellar transaction, real USDC settlement, a retry with proof. The agent gets real data back and a transaction hash.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <div class="ticks"></div>
+
+      <footer class="footer">
+        <div class="wrap">
+          <div class="footer-col">
+            <svg class="footer-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#documentation-icon"></use></svg>
+            <h2>Documentation</h2>
+            <p class="body-default">Architecture, the on-chain policy deep dive, and the honest status of every component.</p>
+            <a class="footer-link" href="https://docs.nymor.xyz/">Read the docs →</a>
+          </div>
+          <div class="footer-col">
+            <svg class="footer-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#github-icon"></use></svg>
+            <h2>Source</h2>
+            <p class="body-default">MCP server, seller, Soroban contracts, dashboard — read the code that produced every proof above.</p>
+            <a class="footer-link" href="https://github.com/debojyoti10CC/nymor" target="_blank" rel="noopener">
+              <svg role="presentation" aria-hidden="true"><use href="/icons.svg#github-icon"></use></svg>
+              View on GitHub
+            </a>
+          </div>
+          <div class="footer-col">
+            <svg class="footer-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#documentation-icon"></use></svg>
+            <h2>Honest status</h2>
+            <p class="body-default">What's live-and-verified, what's proven-but-not-wired, and what's still roadmap — nothing rounded up.</p>
+            <a class="footer-link" href="https://docs.nymor.xyz/status">See the status page →</a>
+          </div>
+        </div>
+      </footer>
+
+      <div class="footer-bottom">
+        <div class="wrap">
+          <span class="caption">Nymor — agentic payments on Stellar, enforced on-chain.</span>
+          <span class="caption">Stellar Testnet</span>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
